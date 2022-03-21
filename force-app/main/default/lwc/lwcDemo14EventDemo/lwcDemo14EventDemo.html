@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title="Demo 14 Event Demo">
+        <lightning-layout vertical-align="stretch" multiple-rows="true" class="x-large">
+            <lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+                <template for:each={contacts} for:item="con">
+                    <div key={con.Id}>
+                       <c-lwc-demo14-contact-details contactdetails={con}></c-lwc-demo14-contact-details>
+                    </div>
+                 </template>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+                Selected Contact ------ {selectedContact.Name}
+            </lightning-layout-item>
+    
+    </lightning-layout>
+    </lightning-card>
+    
+</template>

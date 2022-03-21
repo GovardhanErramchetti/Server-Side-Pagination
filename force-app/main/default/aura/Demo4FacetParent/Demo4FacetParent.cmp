@@ -1,0 +1,4 @@
+<aura:component extensible="true">
+    Demo Parent :<br/>
+    {!v.body}
+</aura:component>

@@ -1,0 +1,31 @@
+.test{
+    display: none;
+}
+
+.highlight{
+    background: green;
+} 
+
+
+.slds-pagination {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .slds-pagination__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  
+  .slds-pagination__item {
+    margin: 0px 15px;
+    font-weight: 600;
+  }
+  
+  .numberBtn button {
+    padding: 0px 20px !important;
+  }

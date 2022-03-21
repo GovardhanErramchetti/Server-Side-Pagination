@@ -1,0 +1,14 @@
+<aura:component>
+    <div>
+    <div class="white" > Hello HTML 
+        
+    </div>
+    <h2> MTX Training DEmo</h2>
+    <ul>
+        <li class="red">iam in red</li>
+        <li class="green">iam in green</li>
+        <li class="blue">iam in blue</li>
+    </ul>
+</div>
+
+</aura:component>

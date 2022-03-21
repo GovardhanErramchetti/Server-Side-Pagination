@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="class" type="String"/>
+    
+    <p class="{!v.class}">
+		{!v.body}
+    </p>
+</aura:component>

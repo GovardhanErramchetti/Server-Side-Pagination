@@ -1,0 +1,55 @@
+<template>
+    <!-- <lightning-card title="Demo 24 Refresh Apex" icon-name="custom:custom19"> -->
+        <!-- <template if:true={allAccounts.data}>
+			<template for:each={allAccounts.data} for:item="acc">
+				<p key={acc.Id}>{acc.Name}---{acc.Active__c}</p>
+			</template>
+		</template> -->
+        <!-- <lightning-button variant="brand" label="Update Account" title="Primary action" onclick={handleClick}
+            class="slds-m-left_x-small"></lightning-button> -->
+        <p>Total Account Records {totalrecords}</p>
+        <table class="slds-table slds-table_cell-buffer  slds-table_bordered"
+            aria-label="Example headless table of Opportunities">
+            <thead class="slds-assistive-text">
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Account Name">Account Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Close Date">Industry</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Stage">Active__c</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Confidence">Index</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={allAccounts} for:item="acc">
+                    <tr class="slds-hint-parent" key={acc.id}>
+                        <td data-label="Account Name">
+                            <div class="slds-truncate">{acc.name}</div>
+                        </td>
+                        <td data-label="Close Date">
+                            <div class="slds-truncate">{acc.industry}</div>
+                        </td>
+                        <td data-label="Prospecting">
+                            <div class="slds-truncate">{acc.id}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{acc.index}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <div class="slds-align_absolute-center">
+            <c-vr-custom-pagination onnext={handleNext} onprevious={handlePrevious} total-record={totalrecords}
+                record-per-page={recordPerPage} if:true={showPagination}></c-vr-custom-pagination>
+        </div>
+    <!-- </lightning-card> -->
+
+
+</template>

@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:attribute name="boundedParentAttribute" type="String" default="Bounded parent"/>
+    <aura:handler name="change" value="{!v.boundedParentAttribute}" action="{!c.changeBoundedParentAttribute}" />
+    <p>==========================Bounded Paret Component Starts==================</p>
+    <p> child Attribute value is :{!v.boundedParentAttribute}</p> <br/>
+     <c:Demo13Child childAttribute="{!v.boundedParentAttribute}" />
+    <lightning:button variant="brand" label="Update Bounded parent Attribute" onclick="{!c.updateBoundedParentAttr}" />
+    <p>==========================Bounded Parent Component Ends==================</p>
+
+</aura:component>

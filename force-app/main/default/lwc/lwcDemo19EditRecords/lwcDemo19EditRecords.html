@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Demo 19 Edit Records" icon-name="custom:custom19">
+        <lightning-record-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            layout-type="Compact"
+            mode="edit"
+            columns=2>
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Demo 19 Edit Records" icon-name="custom:custom19">
+        <lightning-record-form
+            object-api-name={objectApiName}
+            record-id={recordId}
+            fields ={fields}
+            mode="edit"
+            columns=2>
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Demo 19 Edit Records" icon-name="custom:custom19">
+        <lightning-record-edit-form
+        object-api-name={objectApiName}
+        record-id={recordId}>
+            <lightning-input-field field-name="Name">
+            </lightning-input-field>
+            <lightning-input-field field-name="Phone">
+            </lightning-input-field>
+            <lightning-input-field field-name="Active__c">
+            </lightning-input-field>
+            <lightning-input-field field-name="Industry">
+            </lightning-input-field>
+    </lightning-record-edit-form> 
+    </lightning-card>
+ 
+    
+</template>

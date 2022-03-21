@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Demo 22 Calling Apex Using Wire" icon-name="custom:custom19">
+        <lightning-combobox
+            name="progress"
+            label="Select Account"
+            value={value}
+            placeholder="Select Account"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+    <p>Selected value is: {value}</p>
+    <template if:true={allcontacts.data}>
+        <template for:each={allcontacts.data} for:item="con">
+            <p key={con.Id}>{con.Name}---{con.Email}</p>
+        </template>
+    </template>
+    </lightning-card>
+ 
+    
+</template>

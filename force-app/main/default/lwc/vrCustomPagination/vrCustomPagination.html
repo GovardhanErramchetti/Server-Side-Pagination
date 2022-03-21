@@ -1,0 +1,31 @@
+<template>
+    <div style="display:flex; justify-content: center;align-items: baseline;margin-bottom:5px" class="row">
+        <ul >
+            <li class="prevBtn paginationActive">
+                <lightning-button variant="brand" label="PREVIOUS" onclick={handlePrevious} disabled={disablePrevious}></lightning-button>
+            </li>
+         
+          <!--  <template for:each={pageArray} for:item="i">
+                <li class="slds-pagination__item numberBtn paginationActive" key={i}>
+                    <lightning-button class="button__small" variant="brand" label={i}></lightning-button>
+                </li>
+            </template> -->
+           
+            <!-- Total Records: {totalRecord} Page  -->
+            <li style="padding: 0px 20px;font-weight: 600;">{currentPage} / {pages}</li>
+           
+            <li class="nxtBtn paginationActive">
+                <lightning-button variant="brand" label="NEXT" onclick={handleNext} disabled={disableNext}></lightning-button>
+            </li>
+
+           
+        </ul>
+        <div class="slds-grid slds-gutters slds-m-left--x-large" if:true={showPageSelection}> 
+            <div class="slds-col slds-grid slds-m-bottom--medium slds-size_5-of-12" style="align-items: center">
+                <lightning-input type="number" onchange={handleInput} variant="label-hidden"></lightning-input>
+                <a class="slds-button slds-m-left--medium text-underline" onclick={handlePageSelection}>GO</a>
+            </div>
+        </div>    
+
+    </div>
+</template>

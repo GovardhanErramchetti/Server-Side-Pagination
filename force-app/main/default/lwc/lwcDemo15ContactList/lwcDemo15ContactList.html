@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  title="Demo 15 Independent Component Communication">
+        <template for:each={contacts} for:item="con">
+            <div key={con.Id}>
+               <c-lwc-demo15-contact-details contactdetails={con}></c-lwc-demo15-contact-details>
+            </div>
+         </template>
+ </lightning-card>
+ 
+</template>

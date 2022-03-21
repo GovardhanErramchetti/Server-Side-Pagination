@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+   <lightning:card title="Demo 28 LWC with Aura">
+       <c:demo1HelloWorld></c:demo1HelloWorld>
+   </lightning:card>
+</aura:component>

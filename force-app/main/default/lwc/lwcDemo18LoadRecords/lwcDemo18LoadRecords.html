@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Demo 18 Load Records" icon-name="custom:custom19">
+        <lightning-record-form
+            object-api-name="Account"
+            record-id={recordId}
+            layout-type="Full"
+            mode="view"
+            columns =2
+            onsubmit ={handlesubmit}>
+        </lightning-record-form>
+        <!-- layout type = "Full/Contact"
+        mode = "view/edit/readonly"
+        fields = {fieldArray}-->
+    </lightning-card>
+    <lightning-card title="Demo 18 Load Records Using Record view forms" icon-name="custom:custom19">
+        <lightning-record-view-form
+        object-api-name="Account"
+        record-id={recordId}>
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Phone"></lightning-output-field>
+            <lightning-output-field field-name="Industry"></lightning-output-field>
+            <lightning-output-field field-name="Active__c"></lightning-output-field>
+    </lightning-record-view-form>
+    </lightning-card>
+    <lightning-card title="Demo 18 Load Records Using UIRecordAPI" icon-name="custom:custom19">
+        <lightning-record-view-form
+            object-api-name="Account"
+            record-id={recordId}>
+                <div class="slds-box">
+                    <p><lightning-formatted-text value={nameValue} ></lightning-formatted-text></p>
+                    <p><lightning-formatted-text value={industryValue}></lightning-formatted-text></p>
+                    <p><lightning-formatted-number value={revenueValue}></lightning-formatted-number></p>
+                </div>
+    </lightning-record-view-form>
+    </lightning-card>
+ 
+    
+</template>

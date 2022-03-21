@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction">
+    <aura:attribute name="currentDateTime" type="String"/>
+    <aura:attribute name="textcolor" type="String" />
+    <aura:attribute name="format" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="{!textcolor}">
+
+        <ui:outputDateTime aura:id="oDataTime" value="{!v.currentDateTime}" format="{!v.format}"/>
+        {!v.textcolor}
+    </div>
+    <p class ="{!textcolor}"> hello</p>
+ 
+</aura:component>

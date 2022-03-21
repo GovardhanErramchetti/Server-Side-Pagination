@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="childAttribute" type="String" default="" />
+    <aura:handler name="change" value="{!v.childAttribute}" action="{!c.changeChildAttribute}"/>
+    <p>================child component starts==============</p>
+    <p>Child component child attribute value is:{!v.childAttribute}</p>
+    <p>
+        <lightning:button variant="brand" label="update Child Attribute" onclick="{!c.updateChildAttr}"/>
+    </p>
+    <p>==================child component ends=======================</p>
+</aura:component>

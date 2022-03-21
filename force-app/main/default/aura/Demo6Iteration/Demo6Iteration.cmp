@@ -1,0 +1,16 @@
+<aura:component>
+    <aura:attribute name="colorSet" type="Set" default="['green','green','yellow','black']"/>
+
+	 <aura:iteration items="1,2,3,4,5" var="item">
+        <meter value="{!item / 5}"/><br/>
+    </aura:iteration>
+    <ol>
+    <aura:iteration items="{!v.colorSet}" var="col">
+        <li>{!col}</li>
+    </aura:iteration>
+</ol>
+    
+
+    
+
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+	Aura Method Demo:
+    <br/> <br/>
+    <c:Demo14Message aura:id="message"/>
+    <lightning:button variant="brand" label="Show Message" onclick="{!c.showMessage}" />
+	<lightning:button variant="brand" label="Show Error Message" onclick="{!c.showErrorMessage}" />
+    <lightning:button variant="brand" label="Remove Message" onclick="{!c.removeMessage}" />
+</aura:component>

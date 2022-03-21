@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="messagefromevent" type="String" />
+    <aura:handler name="cmpEvent" event="c:cmpevent" action="{!c.handleEvent}" />
+    <br/><br/><br/><br/><br/>
+    message passed Form child component is :{!v.messagefromevent}
+    <c:Demo19CmpEventFire />
+
+</aura:component>

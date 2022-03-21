@@ -1,0 +1,121 @@
+<aura:component controller="Demo22WrapperDemoController">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="view" type="Object"/>
+    <aura:attribute name="isEdit" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="Account Details">
+        
+        <p class="slds-p-horizontal_small">
+            Account Name={!v.view.name}
+        </p>
+          
+        <p class="slds-p-horizontal_small">
+            Account Id={!v.view.id}
+        </p>
+    </lightning:card>
+
+    <aura:if isTrue="{!v.isEdit}">
+      <lightning:button variant="brand" label="Save" onclick="{!c.saveRecords}"/>
+      <lightning:button variant="brand" label="Add new Contact" onclick="{!c.addNewContact}" />
+      <aura:set attribute="else">
+        <lightning:button variant="brand" label="Edit" onclick="{!c.editRecords}"/>
+      </aura:set>
+    </aura:if>
+      
+    <lightning:card title="Related Contact">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="First Name">First Name</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Last Name">Last Name</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Phone">Phone</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Email">Email</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            <aura:iteration items="{!v.view.wrapperContactList}" var="con">
+              <aura:if isTrue="{!v.isEdit}">
+                <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                    <lightning:input label="" value="{!con.FirstName}"/>
+                  </th>
+                  <th class="" scope="col">
+                    <lightning:input label="" value="{!con.LastName}"/>
+                  </th>
+                  <th class="" scope="col">
+                    <lightning:input label="" value="{!con.Phone}"/>
+                  </th>
+                  <th class="" scope="col">
+                    <lightning:input label="" value="{!con.Email}"/>
+                  </th>
+              </tr>
+              <aura:set attribute="else">
+               <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="First Name">{!con.FirstName}</div>
+                    </th>
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="Last Name">{!con.LastName}</div>
+                    </th>
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="Phone">{!con.Phone}</div>
+                    </th>
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="Email">{!con.Email}</div>
+                    </th>
+
+                </tr>
+                </aura:set>
+              
+                 
+            </aura:if>
+      
+            </aura:iteration>
+            </tbody>
+            </table>
+
+    </lightning:card>
+    <lightning:card title="Related Opportunity">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                  <div class="slds-truncate" title=" Name">Name</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Closed Date">Close Date</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Amount">Amount</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            <aura:iteration items="{!v.view.wrapperOpportunityList}" var="opp">
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                      <div class="slds-truncate" title=" Name">{!opp.Name}</div>
+                    </th>
+                    <th class="" scope="col">
+                      <div class="slds-truncate" title="Closed Date">{!opp.CloseDate}</div>
+                    </th>
+                    <th class="" scope="col">
+                      <div class="slds-truncate" title="Amount">{!opp.Amount}</div>
+                    </th>
+                  </tr>
+            </aura:iteration>
+            </tbody>
+        </table>
+
+    </lightning:card>
+
+
+</aura:component>

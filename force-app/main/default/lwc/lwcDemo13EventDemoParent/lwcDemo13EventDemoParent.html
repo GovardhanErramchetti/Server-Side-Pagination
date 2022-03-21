@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  title="Demo 13 Event Demo">
+      <lightning-layout vertical-align="stretch" multiple-rows="true" class="x-large">
+          <lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+              <c-lwc-demo13-contact-details onselected={contactSelected}></c-lwc-demo13-contact-details>
+          </lightning-layout-item>
+          <lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+              Selected Contact ------ {selectedContact.Name}
+          </lightning-layout-item>
+  
+  </lightning-layout>
+  </lightning-card>
+  </template>

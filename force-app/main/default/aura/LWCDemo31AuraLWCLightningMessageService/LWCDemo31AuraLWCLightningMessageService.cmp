@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+   <aura:attribute type="String" name="myMessage"/>
+   <aura:attribute type="String" name="receivedMessage"/>
+   <lightning:messageChannel type="Demolms__c" aura:id="lmsDemochannel" onMessage="{!c.handleReceivedMessage}"/>
+   <lightning:card title="Demo 31 LWC  Aura LMS">
+       <lightning:input name="input1" label="Enter Message" value="{!v.myMessage}"/>
+       <lightning:button variant="brand" label="Publish Message" onclick="{!c.handleClick}" class="slds-m-left_x-small">
+           </lightning:button>
+      <br/><br/><br/>
+      <p> Received Message : {!v.receivedMessage} </p>
+   </lightning:card>
+
+</aura:component>

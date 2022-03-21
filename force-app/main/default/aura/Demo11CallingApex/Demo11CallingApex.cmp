@@ -1,0 +1,10 @@
+<aura:component controller="Demo11CallingApexController">
+    <aura:attribute name="accountList" type="Account[]"/>
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  -->
+    <div>
+        <aura:iteration items="{!v.accountList}" var="acc">
+            Id is : {!acc.Id} and Name is : {!acc.Name} <br/>
+        </aura:iteration>
+    </div>
+    <lightning:button variant="brand" label="Get Data" onclick="{!c.doInit}" />
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="parentAttribute" type="String" default="Bounded Parent" />
+    <aura:handler name="change" value="{!v.parentAttribute}" action="{!c.changeParentAttribute}"/>
+    <p>================Unbounded parent component starts==============</p>
+    <p>Unbounded parent component child attribute value is:{!v.parentAttribute}</p>
+    <c:Demo12Child  childAttribute="{#v.parentAttribute}"/>
+    <p>
+        <lightning:button variant="brand" label="update parent Attribute" onclick="{!c.updateParentAttr}"/>
+    </p>
+    <p>==================Unbounded parent component ends=======================</p>
+</aura:component>

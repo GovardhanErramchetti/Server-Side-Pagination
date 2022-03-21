@@ -1,0 +1,17 @@
+<aura:component>
+     <aura:attribute name="show" type="Boolean" default="false"/>
+     <aura:attribute name="label" type="String" default="Show False" />
+
+     <div>
+         <aura:if isTrue="{!v.show}">
+             True <br/>
+             <aura:set attribute="else">
+                 False <br/>
+             </aura:set>
+            
+             
+            </aura:if>
+            <lightning:button label="{!v.label}" title="Neutral action" onclick="{! c.handleClick }"/>
+     </div>
+
+</aura:component>

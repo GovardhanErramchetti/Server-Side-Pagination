@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+   <aura:attribute name="selectedContact" type="String"/>
+   <c:lwcAuraPubsub aura:id="aurapubsubmodule" onready="{!c.handleEvent}"/>
+   <lightning:card title="Demo 30 LWC  Aura Communication">
+       <p> Selected contact is : {!v.selectedContact} </p>
+   </lightning:card>
+
+ 
+</aura:component>

@@ -1,0 +1,72 @@
+<aura:component >
+    <aura:attribute name="myString" type="String" default="My String Value"/>
+    <aura:attribute name="jsObject" type="Object" default=""/>
+    <aura:attribute name="myAccount" type="Account" default="{'sobjectType' :'Account','Name':'MTX Account','Rating':'Hot'}"/>
+    <aura:attribute name="myCollege" type="College__c" default="{'sobjectType' :'College__c','Name':'MTX Collge','Active_College__c':true} "/>
+	<aura:attribute name="stringArray" type="String[]" default="['Value1','Value2','Value3','Value4']"/>
+    <aura:attribute name="colorList" type="List" default="['red','green','yellow','black']"/>
+    <aura:attribute name="colorSet" type="Set" default="['green','green','yellow','black']"/>
+    <aura:attribute name="colorMap" type="Set" default="{ key1 : 'Green' , key2 : 'Black'}"/>
+    <aura:attribute name="myDataType" type="MyDemoWrapper"/>
+
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     	  <div>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Attribute Name</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Basic String </td>
+                    <td>myString</td>
+                    <td>{!v.myString}</td>
+                </tr>
+                <tr>
+                    <td>Javascript Object </td>
+                    <td>jsObject</td>
+                    <td>{!v.jsObject.name}- {!v.jsObject.email}</td>
+                </tr>
+                <tr>
+                    <td>Standard Object </td>
+                    <td>My Account</td>
+                    <td>{!v.myAccount.Name}- {!v.myAccount.Rating}</td>
+                </tr>
+                <tr>
+                    <td>Custom Object </td>
+                    <td>MyCollge</td>
+                    <td>{!v.myCollege.Name}- {!v.myCollege.Active_College__c}</td>
+                </tr>
+                <tr>
+                    <td>Basic String </td>
+                    <td>myString</td>
+                    <td>{!v.myString}</td>
+                </tr>
+                <tr>
+                    <td>Array </td>
+                    <td>stringArray</td>
+                    <td>{!v.stringArray[0]}</td>
+                </tr>
+                <tr>
+                    <td>List </td>
+                    <td>ColorList</td>
+                    <td>{!v.colorList[1]}</td>
+                </tr>
+                 <tr>
+                    <td>Set </td>
+                    <td>ColorSet</td>
+                    <td>{!v.colorList.length}</td>
+                </tr>
+                 <tr>
+                    <td>Map </td>
+                    <td>ColorMap</td>
+                    <td>{!v.colorMap.key1} - {!v.colorMap.key2} </td>
+                </tr>
+                <tr>
+                    <td>Custom Apex Type </td>
+                    <td>myDataType</td>
+                    <td>{!v.myDataType.myString}- {!v.myDataType.mytest}</td>
+                </tr>
+            </table>
+        </div>
+</aura:component>
